@@ -8,8 +8,8 @@ function serializeElement(
     const value = node.props[key]
     return isOn(key) || value == null
       ? ''
-      : value === ''
-      ? key
+        : value === ''
+        ? key
       : `${key}=${JSON.stringify(value)}`
   })
   .filter(Boolean)
